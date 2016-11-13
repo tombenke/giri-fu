@@ -13,11 +13,11 @@ LDFLAGS += -lsimavr -lelf
 	@$(CC) $(CPPFLAGS) \
 	$< -c -o $@
 
-simulator: simulator.o
+${DIST}/simulator: simulator.o
 	gcc ${CFLAGS} ${LFLAGS} -o $@ $^ $(LDFLAGS)
 
 # Build all
-all: simulator
+all: ${DIST}/simulator
 
 .PHONY: clean
 clean:
