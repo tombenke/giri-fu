@@ -109,7 +109,7 @@ as the next screenshot demonstrates:
 
 ![Simulation results displayed with GTKWave](docs/gtkwave_simulation.png)
 
-On the screenshot, you can see the individual bits of the `PORTB` are switched on/off in series after one another.
+On the screenshot, you can see the individual bits of the `PORTC` are switched on/off in series after one another.
 
 ### Burn the firmware
 
@@ -132,5 +132,5 @@ and plug into the ISP connector on the MCU board, then execute the following com
 - [AVR Libc Home Page](http://www.nongnu.org/avr-libc/)
 - [GTKWave home](http://gtkwave.sourceforge.net/)
 - [simavr - a lean and mean Atmel AVR simulator for linux](https://github.com/buserror/simavr)
-- [freedreno/libdrm](freedreno/libdrm)
-- [libelf package in Ubuntu](libelf package in Ubuntu)
+- [libdrm package for Ubuntu](http://packages.ubuntu.com/search?keywords=libdrm2)
+- [libelf package for Ubuntu](http://packages.ubuntu.com/search?keywords=libelf)
