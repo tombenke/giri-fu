@@ -1,9 +1,9 @@
-# giri-fu
+# giri-fu v1.0
 
-`giri-fu` is a simple garden irrigator functional unit, running on a single chip, micro controller unit.
+The `giri-fu` is a simple garden irrigator functional unit, running on a single chip, micro controller unit.
 
 This repository holds the firmware of this unit,
-and it is written for the [giri-fu-hw](https://github.com/tombenke/giri-fu-hw/tree/v1.0.0) hardware unit.
+and it is written for the [giri-fu-hw v1.0](https://github.com/tombenke/giri-fu-hw/tree/v1.0.0) hardware unit.
 
 The picture below shows [the logical functional block diagram of the v1.0 unit](docs/giri_fu_v1.0_FBD.png?raw=true):
 
@@ -45,9 +45,9 @@ In order to use the project, you need the software and hardware tools listed bel
 
 ## Artifacts
 
-- The `src/firmware` holds the firmware.
-- The `src/simulator` holds a tiny simulation environment of the hardware board, for development and testing purposes.
-- The `dist` folder contains the hex file and the simulator binary, after executing the build command.
+- The [`src/firmware`](src/firmware) holds the firmware.
+- The [`src/simulator`](src/simulator) holds a tiny simulation environment of the hardware board, for development and testing purposes.
+- The [`dist`](dist) folder contains the hex file and the simulator binary, after executing the build command.
 
 ### Build
 
