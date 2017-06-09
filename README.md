@@ -1,12 +1,12 @@
-# giri-fu v1.0
+# giri-fu v2.0
 
 The `giri-fu` is a simple garden irrigator functional unit, running on a single chip, micro controller unit.
 
 This repository holds the firmware of this unit,
-and it is written for the [giri-fu-hw v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.0) hardware unit.
+and it is written for the [giri-fu-hw v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.1) hardware unit.
 
 Note: There is an older (v1) version of this software, which compatible with both the hardware version
-[v1.0](https://github.com/tombenke/giri-fu-hw/tree/v1.0.0) and [v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.0).
+[v1.0](https://github.com/tombenke/giri-fu-hw/tree/v1.0.0) and [v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.1).
 
 The picture below shows [the logical functional block diagram of the v2.0 unit](docs/giri_fu_v2.0_FBD.png?raw=true):
 
@@ -20,7 +20,7 @@ The picture below shows [the logical functional block diagram of the v2.0 unit](
 - Repeats the same timing pattern every 24 hours.
 - Timing starts after reset, with a preprogrammed time offset (no built-in RTC support).
 
-## Infrastructure: [giri-fu-hw v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.0)
+## Infrastructure: [giri-fu-hw v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.1)
 
 ## Platform
 
