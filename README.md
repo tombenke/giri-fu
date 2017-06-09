@@ -8,9 +8,9 @@ and it is written for the [giri-fu-hw v2.0](https://github.com/tombenke/giri-fu-
 Note: There is an older (v1) version of this software, which compatible with both the hardware version
 [v1.0](https://github.com/tombenke/giri-fu-hw/tree/v1.0.0) and [v2.0](https://github.com/tombenke/giri-fu-hw/tree/v2.0.1).
 
-The picture below shows [the logical functional block diagram of the v2.0 unit](docs/giri_fu_v2.0_FBD.png?raw=true):
+The picture below shows [the logical functional block diagram of the v1.1 unit](docs/giri_fu_v1.1_FBD.png?raw=true):
 
-![the functional block diagram of the giri-fu v2.0](docs/giri_fu_v2.0_FBD.png?raw=true)
+![the functional block diagram of the giri-fu v1.1](docs/giri_fu_v1.1_FBD.png?raw=true)
 
 ## Features
 
