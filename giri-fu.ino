@@ -51,6 +51,13 @@ void getVersion(const char* buf) {
     operations.responseOk(buf, FIRMWARE_VERSION);
 };
 
+void resetSectors(void) {
+    // Update the sectors one-by-one
+    for(int s=0; s<numberOfSectors; s++) {
+        sectors[s].reset();
+    }
+}
+
 void resetPorts(void) {
     // Set port modes, and reset out ports
     for ( int p = 0; p < NUM_IN_PORTS; p++) {
@@ -65,6 +72,8 @@ void resetPorts(void) {
 
 void reset(const char* buf) {
     resetPorts();
+    resetSectors();
+    setupSectors();
     operations.responseOk(buf, 0L);
 }
 
@@ -203,7 +212,14 @@ void updateSectors(void) {
 }
 
 void setupSectors() {
-    setTime(5,0,0,5,1,17); // set time to 5:0:00am May 1 2017
+    /* Setup some initial config to spare manual time during installation */
+    sectors[0].set(0, AUTO, 4, 0, 4, 59);
+    sectors[1].set(1, AUTO, 5, 0, 5, 59);
+    sectors[2].set(2, AUTO, 6, 0, 6, 59);
+    sectors[3].set(3, AUTO, 7, 0, 7, 59);
+
+    setTime(3, 59, 55, 12, 6, 17);
+
     Alarm.timerRepeat(1, updateSectors);
 }
 
@@ -215,5 +231,6 @@ void setup() {
 
 void loop() {
     operations.checkRequest();
+    updateSectors();
     Alarm.delay(100);
 }

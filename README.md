@@ -203,6 +203,10 @@ format:
 
     <device-id> getSector <sectorIdx>
 
+the response format:
+
+     <device-id> getSector <sectorIdx> <portIdx> <mode> <state> <fromHour> <fromMinute> <toHour> <toMinute>
+
 example:
 
     g2 getSector 3
