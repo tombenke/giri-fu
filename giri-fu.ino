@@ -41,8 +41,21 @@ SST sectors[] = {
     SST(1, stateChangeCb),
     SST(2, stateChangeCb),
     SST(3, stateChangeCb),
-    SST(4, stateChangeCb),
-    SST(5, stateChangeCb)
+    
+    SST(0, stateChangeCb),
+    SST(1, stateChangeCb),
+    SST(2, stateChangeCb),
+    SST(3, stateChangeCb),
+
+    SST(0, stateChangeCb),
+    SST(1, stateChangeCb),
+    SST(2, stateChangeCb),
+    SST(3, stateChangeCb),
+
+    SST(0, stateChangeCb),
+    SST(1, stateChangeCb),
+    SST(2, stateChangeCb),
+    SST(3, stateChangeCb)
 };
 
 Operations operations(_RE, DE, DEVICE_ID, BAUD_RATE, BUF_SIZE);
@@ -213,10 +226,33 @@ void updateSectors(void) {
 
 void setupSectors() {
     /* Setup some initial config to spare manual time during installation */
+    /* v1
     sectors[0].set(0, AUTO, 4, 0, 4, 59);
     sectors[1].set(1, AUTO, 5, 0, 5, 59);
     sectors[2].set(2, AUTO, 6, 0, 6, 59);
     sectors[3].set(3, AUTO, 7, 0, 7, 59);
+    */
+
+    // v2
+    sectors[0].set(0, AUTO, 4,  0, 4, 14);
+    sectors[1].set(1, AUTO, 4, 15, 4, 29);
+    sectors[2].set(2, AUTO, 4, 30, 4, 44);
+    sectors[3].set(3, AUTO, 4, 45, 4, 59);
+
+    sectors[4].set(0, AUTO, 5,  0, 5, 14);
+    sectors[5].set(1, AUTO, 5, 15, 5, 29);
+    sectors[6].set(2, AUTO, 5, 30, 5, 44);
+    sectors[7].set(3, AUTO, 5, 45, 5, 59);
+
+    sectors[8].set(0, AUTO, 6,  0, 6, 14);
+    sectors[9].set(1, AUTO, 6, 15, 6, 29);
+    sectors[10].set(2, AUTO, 6, 30, 6, 44);
+    sectors[11].set(3, AUTO, 6, 45, 6, 59);
+
+    sectors[12].set(0, AUTO, 7,  0, 7, 14);
+    sectors[13].set(1, AUTO, 7, 15, 7, 29);
+    sectors[14].set(2, AUTO, 7, 30, 7, 44);
+    sectors[15].set(3, AUTO, 7, 45, 7, 59);
 
     setTime(3, 59, 55, 12, 6, 17);
 
